@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css" />
+    <link rel="stylesheet" href="_css/form.css" />
+</head>
+<script src="_javascript/funcoes.js">
+</script>
+<script>
+    function calcTotal(){
+        let qtd = parseInt(document.getElementById('cQtd').value)
+        tot = qtd * 1500
+        document.getElementById('cTot').value = tot
+    }
+</script>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2> A Revolução do Google está chegando</h2>
+            </hgroup>
+            <img id="icone" src="_imagens/contato.png" />
+            <nav id="menu">
+                <h1>Menu principal</h1>
+                <ul type="disc">
+                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
+                            href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
+                        onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
+                            href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
+                            href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-specs">
+            <article id="noticia">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por DANIEL ROCHA</h2>
+                    <h3 class="di">Atualizado em 04/04/2023</h3>
+                </hgroup>
+            </article>
+        </section>
+        <form method="post" id="fcontato" action="mailto:daniel.rochamec4@gmail.com" oninput="calcTotal();">
+            <fieldset id="usuario">
+                <legend>Identificação do Usuário</legend>
+                <p><label for="cNome">Nome:</label>
+                    <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo" />
+                </p>
+                <p><label for="cSenha">Senha:</label>
+                    <input type="password" name="tSenha" id="cSenha" size="10" maxlength="10" placeholder="8 Digitos" />
+                </p>
+                <p><label for="cEmail">E-mail:</label>
+                    <input type="email" name="tEmail" id="cEmail" size="30" maxlength="50" placeholder="E-mail" />
+                </p>
+                <fildset id="sexo">
+                    <legend>
+                        <input type="radio" name="csexo" id="tMasc"><label for="tMasc">Masculino</label><br />
+                        <input type="radio" name="csexo" id="tFem"><label for="tFem">Feminino</label>
+                </fildset>
+                <p><label for="tData">Data de Nascimento:</label>
+                    <input type="date" name="cData" id="tData">
+                </p>
+            </fieldset>
+
+            <fieldset id="endereco">
+                <legend>Endereço do Usuário</legend>
+                <p><label for="tRua">Logradouro:</label>
+                    <input type="text" name="cRua" id="tRua" size="26" maxlength="150" placeholder="Rua, QD, AV" />
+                </p>
+                <p><label for="tBairro">Bairro:</label>
+                    <input type="text" name="cBairro" id="tBairro" size="26" maxlength="150"
+                        placeholder="bairro, bloco, condominio, setor" />
+                </p>
+                <p><label for="tNumero"> Número:</label>
+                    <input type="number" name="cNumero" id="tNumero" min="0" max="9999" />
+                </p>
+                <p><label for="cEst">Estado:</label>
+                    <select name="tEst" id="cEst">
+                        <option value="Acre">Acre</option>
+                        <option value="Alagoas">Alagoas</option>
+                        <option value="Amapá">Amapá</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Bahia">Bahia</option>
+                        <option value="Ceará">Ceará</option>
+                        <option value="Distrito Federal">Distrito Federal</option>
+                        <option value="Espírito Santo">Espírito Santo</option>
+                        <option value="Goiás">Goiás</option>
+                        <option value="Maranhão">Maranhão</option>
+                        <option value="Mato Grosso">Mato Grosso</option>
+                        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                        <option value="Minas Gerais">Minas Gerais</option>
+                        <option value="Pará">Pará</option>
+                        <option value="Paraíba">Paraíba</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Piauí">Piauí</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                        <option value="Rondônia">Rondônia</option>
+                        <option value="Roraima">Roraima</option>
+                        <option value="Santa Catarina">Santa Catarina</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Tocantins">Tocantins</option>
+                    </select>
+                </p>
+                <p><label for="tCidade">Cidade:</label>
+                    <input type="text" name="cCidade" id="tCidade" maxlength="40" size="20" placeholder="city"
+                        list="cidades" />
+                </p>
+                <datalist id="cidades">
+
+                </datalist>
+            </fieldset>
+
+            <fieldset id="mensagem">
+                <legend>Mensagem do Usuário</legend>
+                <p><label for="tGrau"></label>Grau de Urgência:
+                    Min<input type="range" name="cGrau" id="tGrau" min="1" max="10" step="3">Max</label></p>
+                <p> Mensagem:
+                    <label for="tMensagem">
+                        <textarea name="cMensagem" id="tMensagem" cols="45" rows="5"
+                            placeholder="Deixe aqui sua mensagem"></textarea>
+                </p>
+            </fieldset>
+            <fieldset id="pedido">
+                <legend>Quero um Google Glass</legend>
+                <p><input type="checkbox" name="cPed" id="pedidoOculos" />
+                    <label for="tPed">Gostaria de adquirir um Google Glass quando disponível</label>
+                </p>
+                <p><label for="tCor"> Cor:</label>
+                    <input type="color" name="tCor" id="cCor" />
+                </p>
+                <p><label for="totalQuantidade">Quantidade:</label>
+                    <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0" />
+                </p>
+                <p><label for="precoTotal"> Preço Total: R$</label>
+                    <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly />
+                </p>
+                </filedset>
+                <input type="image" name="tImagem" src="_imagens/botao-enviar.png" />
+        </form>
+        <footer id="rodape">
+            <p class="c">DANIEL ROCHA MEC</p>
+            <a href="https://www.facebook.com/bodsonbr" target="_blank"> Facebook |<a
+                    href="https://www.instagram.com/daniielrochamec/" target="_blank">Instagram
+        </footer>
+    </div>
+</body>
+
+</html>
